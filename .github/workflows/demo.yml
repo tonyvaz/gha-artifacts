@@ -36,3 +36,9 @@ jobs:
     steps:
       - name: Deploy
         run: echo "Deploying..."
+      - name: Download the artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-files
+      - name: Show files in the job
+        run: ls
